@@ -1,0 +1,332 @@
+countryCode,id,name,code,startDate,endDate,year,clusterCode,cluster,requirements,funding,percentFunded
+COD,1509,République Démocratique du Congo Besoins Humanitaires et Plan de Réponse 2026,HCOD26,2026-01-01,2026-12-31,2026,8758,Abris et AME,67922100,966252,1
+COD,1509,République Démocratique du Congo Besoins Humanitaires et Plan de Réponse 2026,HCOD26,2026-01-01,2026-12-31,2026,8620,Coordination et gestion des camps,17933461,,
+COD,1509,République Démocratique du Congo Besoins Humanitaires et Plan de Réponse 2026,HCOD26,2026-01-01,2026-12-31,2026,8757,"Coordination, soutien thématique et support au système",20235000,4924551,24
+COD,1509,République Démocratique du Congo Besoins Humanitaires et Plan de Réponse 2026,HCOD26,2026-01-01,2026-12-31,2026,8764,"Eau, hygiène & assainissement",80102939,2693474,3
+COD,1509,République Démocratique du Congo Besoins Humanitaires et Plan de Réponse 2026,HCOD26,2026-01-01,2026-12-31,2026,8766,Education,33095280,4942911,15
+COD,1509,République Démocratique du Congo Besoins Humanitaires et Plan de Réponse 2026,HCOD26,2026-01-01,2026-12-31,2026,8759,Logistique,25077550,277676,1
+COD,1509,République Démocratique du Congo Besoins Humanitaires et Plan de Réponse 2026,HCOD26,2026-01-01,2026-12-31,2026,8763,Nutrition,136113346,24263474,18
+COD,1509,République Démocratique du Congo Besoins Humanitaires et Plan de Réponse 2026,HCOD26,2026-01-01,2026-12-31,2026,8767,Protection,93681543,18088901,19
+COD,1509,République Démocratique du Congo Besoins Humanitaires et Plan de Réponse 2026,HCOD26,2026-01-01,2026-12-31,2026,8765,Réponse multisectorielle aux réfugiés,102604294,19056959,19
+COD,1509,République Démocratique du Congo Besoins Humanitaires et Plan de Réponse 2026,HCOD26,2026-01-01,2026-12-31,2026,8761,Santé,105260067,13410136,13
+COD,1509,République Démocratique du Congo Besoins Humanitaires et Plan de Réponse 2026,HCOD26,2026-01-01,2026-12-31,2026,8760,Sécurité alimentaire,621892660,19624191,3
+COD,1509,République Démocratique du Congo Besoins Humanitaires et Plan de Réponse 2026,HCOD26,2026-01-01,2026-12-31,2026,8762,Transfert d’espèces à usages multiples,99803478,9377117,9
+COD,1509,République Démocratique du Congo Besoins Humanitaires et Plan de Réponse 2026,HCOD26,2026-01-01,2026-12-31,2026,,Not specified,,231631480,
+COD,1509,République Démocratique du Congo Besoins Humanitaires et Plan de Réponse 2026,HCOD26,2026-01-01,2026-12-31,2026,,Multiple clusters/sectors (shared),,10195496,
+COD,1261,République Démocratique du Congo Besoins Humanitaires et Plan de Réponse 2025,HCOD25,2025-01-01,2025-12-31,2025,7992,Abris et AME,133407721,27706347,21
+COD,1261,République Démocratique du Congo Besoins Humanitaires et Plan de Réponse 2025,HCOD25,2025-01-01,2025-12-31,2025,7993,Coordination,46948303,20181382,43
+COD,1261,République Démocratique du Congo Besoins Humanitaires et Plan de Réponse 2025,HCOD25,2025-01-01,2025-12-31,2025,8001,Coordination et gestion des camps,37102195,100000,0
+COD,1261,République Démocratique du Congo Besoins Humanitaires et Plan de Réponse 2025,HCOD25,2025-01-01,2025-12-31,2025,7994,"Eau, hygiène & assainissement",148935526,32267736,22
+COD,1261,République Démocratique du Congo Besoins Humanitaires et Plan de Réponse 2025,HCOD25,2025-01-01,2025-12-31,2025,7995,Education,66039741,10031896,15
+COD,1261,République Démocratique du Congo Besoins Humanitaires et Plan de Réponse 2025,HCOD25,2025-01-01,2025-12-31,2025,7996,Logistique,48840000,27054852,55
+COD,1261,République Démocratique du Congo Besoins Humanitaires et Plan de Réponse 2025,HCOD25,2025-01-01,2025-12-31,2025,7997,Nutrition,275182726,84529785,31
+COD,1261,République Démocratique du Congo Besoins Humanitaires et Plan de Réponse 2025,HCOD25,2025-01-01,2025-12-31,2025,7998,Protection,177359120,83081811,47
+COD,1261,République Démocratique du Congo Besoins Humanitaires et Plan de Réponse 2025,HCOD25,2025-01-01,2025-12-31,2025,7991,Réponse multisectorielle aux réfugiés,195000000,74013768,38
+COD,1261,République Démocratique du Congo Besoins Humanitaires et Plan de Réponse 2025,HCOD25,2025-01-01,2025-12-31,2025,7999,Santé,200240191,75721876,38
+COD,1261,République Démocratique du Congo Besoins Humanitaires et Plan de Réponse 2025,HCOD25,2025-01-01,2025-12-31,2025,8000,Sécurité alimentaire,1114773750,106577896,10
+COD,1261,République Démocratique du Congo Besoins Humanitaires et Plan de Réponse 2025,HCOD25,2025-01-01,2025-12-31,2025,8002,Transfert d’espèces à usages multiples,94186878,54215030,58
+COD,1261,République Démocratique du Congo Besoins Humanitaires et Plan de Réponse 2025,HCOD25,2025-01-01,2025-12-31,2025,,Not specified,,65566561,
+COD,1261,République Démocratique du Congo Besoins Humanitaires et Plan de Réponse 2025,HCOD25,2025-01-01,2025-12-31,2025,,Multiple clusters/sectors (shared),,28506166,
+COD,1187,République Démocratique du Congo Plan de Réponse Humanitaire 2024,HCOD24,2024-01-01,2024-12-31,2024,7434,Abris,79657617,42858577,54
+COD,1187,République Démocratique du Congo Plan de Réponse Humanitaire 2024,HCOD24,2024-01-01,2024-12-31,2024,7435,Articles ménagers essentiels,52904281,11205654,21
+COD,1187,République Démocratique du Congo Plan de Réponse Humanitaire 2024,HCOD24,2024-01-01,2024-12-31,2024,7592,Cash à usage multiple,,50774723,
+COD,1187,République Démocratique du Congo Plan de Réponse Humanitaire 2024,HCOD24,2024-01-01,2024-12-31,2024,7437,Coordination,42795712,22657193,53
+COD,1187,République Démocratique du Congo Plan de Réponse Humanitaire 2024,HCOD24,2024-01-01,2024-12-31,2024,7446,Coordination et gestion des camps,29242585,2628504,9
+COD,1187,République Démocratique du Congo Plan de Réponse Humanitaire 2024,HCOD24,2024-01-01,2024-12-31,2024,7438,"Eau, hygiène & assainissement",137802218,80809929,59
+COD,1187,République Démocratique du Congo Plan de Réponse Humanitaire 2024,HCOD24,2024-01-01,2024-12-31,2024,7439,Education,66040088,18149658,27
+COD,1187,République Démocratique du Congo Plan de Réponse Humanitaire 2024,HCOD24,2024-01-01,2024-12-31,2024,7440,Logistique,33400000,22737964,68
+COD,1187,République Démocratique du Congo Plan de Réponse Humanitaire 2024,HCOD24,2024-01-01,2024-12-31,2024,7441,Nutrition,285097209,103124100,36
+COD,1187,République Démocratique du Congo Plan de Réponse Humanitaire 2024,HCOD24,2024-01-01,2024-12-31,2024,7442,Protection,182297197,91715215,50
+COD,1187,République Démocratique du Congo Plan de Réponse Humanitaire 2024,HCOD24,2024-01-01,2024-12-31,2024,7445,Réponse multisectorielle aux réfugiés,197009166,13159711,7
+COD,1187,République Démocratique du Congo Plan de Réponse Humanitaire 2024,HCOD24,2024-01-01,2024-12-31,2024,7443,Santé,264857250,90939829,34
+COD,1187,République Démocratique du Congo Plan de Réponse Humanitaire 2024,HCOD24,2024-01-01,2024-12-31,2024,7444,Sécurité alimentaire,1207818912,610161391,51
+COD,1187,République Démocratique du Congo Plan de Réponse Humanitaire 2024,HCOD24,2024-01-01,2024-12-31,2024,7594,Transversales,1705509,2515119,147
+COD,1187,République Démocratique du Congo Plan de Réponse Humanitaire 2024,HCOD24,2024-01-01,2024-12-31,2024,,Not specified,,118818582,
+COD,1187,République Démocratique du Congo Plan de Réponse Humanitaire 2024,HCOD24,2024-01-01,2024-12-31,2024,,Multiple clusters/sectors (shared),,40221234,
+COD,1113,République Démocratique du Congo Plan de Réponse Humanitaire 2023,HCOD23,2023-01-01,2023-12-31,2023,6803,Abris,84442498,38925669,46
+COD,1113,République Démocratique du Congo Plan de Réponse Humanitaire 2023,HCOD23,2023-01-01,2023-12-31,2023,6804,Articles ménagers essentiels,49703691,9476555,19
+COD,1113,République Démocratique du Congo Plan de Réponse Humanitaire 2023,HCOD23,2023-01-01,2023-12-31,2023,6805,Cash à usage multiple,1500000,30765949,2051
+COD,1113,République Démocratique du Congo Plan de Réponse Humanitaire 2023,HCOD23,2023-01-01,2023-12-31,2023,6806,Coordination,39950000,25762755,64
+COD,1113,République Démocratique du Congo Plan de Réponse Humanitaire 2023,HCOD23,2023-01-01,2023-12-31,2023,6815,Coordination et gestion des camps,22782815,3246465,14
+COD,1113,République Démocratique du Congo Plan de Réponse Humanitaire 2023,HCOD23,2023-01-01,2023-12-31,2023,6807,"Eau, hygiène & assainissement",91849451,83619872,91
+COD,1113,République Démocratique du Congo Plan de Réponse Humanitaire 2023,HCOD23,2023-01-01,2023-12-31,2023,6808,Education,95035980,18214514,19
+COD,1113,République Démocratique du Congo Plan de Réponse Humanitaire 2023,HCOD23,2023-01-01,2023-12-31,2023,6809,Logistique,33400000,21582840,65
+COD,1113,République Démocratique du Congo Plan de Réponse Humanitaire 2023,HCOD23,2023-01-01,2023-12-31,2023,6810,Nutrition,272177969,60907770,22
+COD,1113,République Démocratique du Congo Plan de Réponse Humanitaire 2023,HCOD23,2023-01-01,2023-12-31,2023,6811,Protection,146478110,72211367,49
+COD,1113,République Démocratique du Congo Plan de Réponse Humanitaire 2023,HCOD23,2023-01-01,2023-12-31,2023,6814,Réponse multisectorielle aux réfugiés,171903480,68400914,40
+COD,1113,République Démocratique du Congo Plan de Réponse Humanitaire 2023,HCOD23,2023-01-01,2023-12-31,2023,6812,Santé,173797895,64115372,37
+COD,1113,République Démocratique du Congo Plan de Réponse Humanitaire 2023,HCOD23,2023-01-01,2023-12-31,2023,6813,Sécurité alimentaire,1069662194,390672979,37
+COD,1113,République Démocratique du Congo Plan de Réponse Humanitaire 2023,HCOD23,2023-01-01,2023-12-31,2023,,Not specified,,53140022,
+COD,1113,République Démocratique du Congo Plan de Réponse Humanitaire 2023,HCOD23,2023-01-01,2023-12-31,2023,,Multiple clusters/sectors (shared),,15589837,
+COD,1093,République Démocratique du Congo Plan de Réponse Humanitaire 2022,HCOD22,2022-01-01,2022-12-31,2022,6571,Abris,91615814,24647091,27
+COD,1093,République Démocratique du Congo Plan de Réponse Humanitaire 2022,HCOD22,2022-01-01,2022-12-31,2022,6572,Articles ménagers essentiels,45637848,33793692,74
+COD,1093,République Démocratique du Congo Plan de Réponse Humanitaire 2022,HCOD22,2022-01-01,2022-12-31,2022,6573,Cash à usage multiple,,23639353,
+COD,1093,République Démocratique du Congo Plan de Réponse Humanitaire 2022,HCOD22,2022-01-01,2022-12-31,2022,6574,Coordination,36255162,19366043,53
+COD,1093,République Démocratique du Congo Plan de Réponse Humanitaire 2022,HCOD22,2022-01-01,2022-12-31,2022,6575,"Eau, hygiène & assainissement",91246024,63596089,70
+COD,1093,République Démocratique du Congo Plan de Réponse Humanitaire 2022,HCOD22,2022-01-01,2022-12-31,2022,6576,Education,68470556,12136716,18
+COD,1093,République Démocratique du Congo Plan de Réponse Humanitaire 2022,HCOD22,2022-01-01,2022-12-31,2022,6577,Logistique,74700000,17678902,24
+COD,1093,République Démocratique du Congo Plan de Réponse Humanitaire 2022,HCOD22,2022-01-01,2022-12-31,2022,6578,Nutrition,258645165,105890692,41
+COD,1093,République Démocratique du Congo Plan de Réponse Humanitaire 2022,HCOD22,2022-01-01,2022-12-31,2022,6579,Protection,134121472,58585730,44
+COD,1093,République Démocratique du Congo Plan de Réponse Humanitaire 2022,HCOD22,2022-01-01,2022-12-31,2022,6580,Réponse multisectorielle aux réfugiés,135300000,11676834,9
+COD,1093,République Démocratique du Congo Plan de Réponse Humanitaire 2022,HCOD22,2022-01-01,2022-12-31,2022,6581,Santé,180860024,109946530,61
+COD,1093,République Démocratique du Congo Plan de Réponse Humanitaire 2022,HCOD22,2022-01-01,2022-12-31,2022,6582,Sécurité alimentaire,764822532,330589762,43
+COD,1093,République Démocratique du Congo Plan de Réponse Humanitaire 2022,HCOD22,2022-01-01,2022-12-31,2022,,Not specified,,125438901,
+COD,1093,République Démocratique du Congo Plan de Réponse Humanitaire 2022,HCOD22,2022-01-01,2022-12-31,2022,,Multiple clusters/sectors (shared),,68147718,
+COD,1026,République Démocratique du Congo Plan de Réponse Humanitaire 2021,HCOD21,2021-01-01,2021-12-31,2021,5919,Abris,119582476,33496589,28
+COD,1026,République Démocratique du Congo Plan de Réponse Humanitaire 2021,HCOD21,2021-01-01,2021-12-31,2021,6155,Articles ménagers essentiels,43928450,0,0
+COD,1026,République Démocratique du Congo Plan de Réponse Humanitaire 2021,HCOD21,2021-01-01,2021-12-31,2021,5921,Cash à usage multiple,,1038011,
+COD,1026,République Démocratique du Congo Plan de Réponse Humanitaire 2021,HCOD21,2021-01-01,2021-12-31,2021,5922,Coordination,35950000,13531235,38
+COD,1026,République Démocratique du Congo Plan de Réponse Humanitaire 2021,HCOD21,2021-01-01,2021-12-31,2021,5924,"Eau, hygiène & assainissement",110943974,13924125,13
+COD,1026,République Démocratique du Congo Plan de Réponse Humanitaire 2021,HCOD21,2021-01-01,2021-12-31,2021,5923,Education,72216898,15418219,21
+COD,1026,République Démocratique du Congo Plan de Réponse Humanitaire 2021,HCOD21,2021-01-01,2021-12-31,2021,5925,Logistique,79496053,10001854,13
+COD,1026,République Démocratique du Congo Plan de Réponse Humanitaire 2021,HCOD21,2021-01-01,2021-12-31,2021,5926,Nutrition,260464387,83750572,32
+COD,1026,République Démocratique du Congo Plan de Réponse Humanitaire 2021,HCOD21,2021-01-01,2021-12-31,2021,5927,Protection,134456397,29414739,22
+COD,1026,République Démocratique du Congo Plan de Réponse Humanitaire 2021,HCOD21,2021-01-01,2021-12-31,2021,5930,Réponse multisectorielle aux réfugiés,109200000,17614609,16
+COD,1026,République Démocratique du Congo Plan de Réponse Humanitaire 2021,HCOD21,2021-01-01,2021-12-31,2021,5928,Santé,187181592,30907455,17
+COD,1026,République Démocratique du Congo Plan de Réponse Humanitaire 2021,HCOD21,2021-01-01,2021-12-31,2021,5929,Sécurité alimentaire,830883076,298515143,36
+COD,1026,République Démocratique du Congo Plan de Réponse Humanitaire 2021,HCOD21,2021-01-01,2021-12-31,2021,,Not specified,,173800744,
+COD,1026,République Démocratique du Congo Plan de Réponse Humanitaire 2021,HCOD21,2021-01-01,2021-12-31,2021,,Multiple clusters/sectors (shared),,148398231,
+COD,919,République Démocratique du Congo Plan de Réponse Humanitaire 2020,HCOD20,2020-01-01,2020-12-31,2020,5089,Abris,64544721,15339688,24
+COD,919,République Démocratique du Congo Plan de Réponse Humanitaire 2020,HCOD20,2020-01-01,2020-12-31,2020,5558,Abris COVID-19,11890045,98443,1
+COD,919,République Démocratique du Congo Plan de Réponse Humanitaire 2020,HCOD20,2020-01-01,2020-12-31,2020,5608,Activités CCCM COVID-19,,0,
+COD,919,République Démocratique du Congo Plan de Réponse Humanitaire 2020,HCOD20,2020-01-01,2020-12-31,2020,5090,Articles ménagers essentiels,35588333,0,0
+COD,919,République Démocratique du Congo Plan de Réponse Humanitaire 2020,HCOD20,2020-01-01,2020-12-31,2020,5092,Coordination,32200000,20470176,64
+COD,919,République Démocratique du Congo Plan de Réponse Humanitaire 2020,HCOD20,2020-01-01,2020-12-31,2020,5093,Eau Hygiène et Assainissement,174566546,23565081,13
+COD,919,République Démocratique du Congo Plan de Réponse Humanitaire 2020,HCOD20,2020-01-01,2020-12-31,2020,5562,Eau Hygiène et Assainissement COVID-19,27019620,5959106,22
+COD,919,République Démocratique du Congo Plan de Réponse Humanitaire 2020,HCOD20,2020-01-01,2020-12-31,2020,5094,Education,69350287,11444706,17
+COD,919,République Démocratique du Congo Plan de Réponse Humanitaire 2020,HCOD20,2020-01-01,2020-12-31,2020,5559,Education COVID-19,6055340,2266388,37
+COD,919,République Démocratique du Congo Plan de Réponse Humanitaire 2020,HCOD20,2020-01-01,2020-12-31,2020,5095,Logistique,43000000,29465673,69
+COD,919,République Démocratique du Congo Plan de Réponse Humanitaire 2020,HCOD20,2020-01-01,2020-12-31,2020,5555,Logistique COVID-19,6000000,272700,5
+COD,919,République Démocratique du Congo Plan de Réponse Humanitaire 2020,HCOD20,2020-01-01,2020-12-31,2020,5096,Nutrition,200808435,84026556,42
+COD,919,République Démocratique du Congo Plan de Réponse Humanitaire 2020,HCOD20,2020-01-01,2020-12-31,2020,5554,Nutrition COVID-19,17362858,0,0
+COD,919,République Démocratique du Congo Plan de Réponse Humanitaire 2020,HCOD20,2020-01-01,2020-12-31,2020,5097,Protection,76795584,11304442,15
+COD,919,République Démocratique du Congo Plan de Réponse Humanitaire 2020,HCOD20,2020-01-01,2020-12-31,2020,5557,Protection COVID-19,39068169,1729405,4
+COD,919,République Démocratique du Congo Plan de Réponse Humanitaire 2020,HCOD20,2020-01-01,2020-12-31,2020,5235,Protection: Protection de l'enfant,,1297863,
+COD,919,République Démocratique du Congo Plan de Réponse Humanitaire 2020,HCOD20,2020-01-01,2020-12-31,2020,5745,Protection: Protection de l'enfant COVID-19,,0,
+COD,919,République Démocratique du Congo Plan de Réponse Humanitaire 2020,HCOD20,2020-01-01,2020-12-31,2020,5236,Protection: Violences basées sur le genre,,1448742,
+COD,919,République Démocratique du Congo Plan de Réponse Humanitaire 2020,HCOD20,2020-01-01,2020-12-31,2020,5100,Réponse Multisectoriel aux Réfugiés,125802869,21329637,17
+COD,919,République Démocratique du Congo Plan de Réponse Humanitaire 2020,HCOD20,2020-01-01,2020-12-31,2020,5560,Réponse Multisectoriel aux Réfugiés COVID-19,19002483,8460000,45
+COD,919,République Démocratique du Congo Plan de Réponse Humanitaire 2020,HCOD20,2020-01-01,2020-12-31,2020,5098,Santé,169587435,11578217,7
+COD,919,République Démocratique du Congo Plan de Réponse Humanitaire 2020,HCOD20,2020-01-01,2020-12-31,2020,5556,Santé COVID-19,62517045,29021265,46
+COD,919,République Démocratique du Congo Plan de Réponse Humanitaire 2020,HCOD20,2020-01-01,2020-12-31,2020,5099,Sécurité Alimentaire,802392935,299083174,37
+COD,919,République Démocratique du Congo Plan de Réponse Humanitaire 2020,HCOD20,2020-01-01,2020-12-31,2020,5563,Sécurité Alimentaire COVID-19,85582115,20219355,24
+COD,919,République Démocratique du Congo Plan de Réponse Humanitaire 2020,HCOD20,2020-01-01,2020-12-31,2020,,Not specified,,162500339,
+COD,919,République Démocratique du Congo Plan de Réponse Humanitaire 2020,HCOD20,2020-01-01,2020-12-31,2020,,Multiple clusters/sectors (shared),,105600506,
+COD,673,République Démocratique du Congo Plan de Réponse Humanitaire 2019,HCOD19,2019-01-01,2019-12-31,2019,4385,Cash,13200000,,
+COD,673,République Démocratique du Congo Plan de Réponse Humanitaire 2019,HCOD19,2019-01-01,2019-12-31,2019,4386,Coordination,16700000,18018756,108
+COD,673,République Démocratique du Congo Plan de Réponse Humanitaire 2019,HCOD19,2019-01-01,2019-12-31,2019,4387,Education,55600000,13679616,25
+COD,673,République Démocratique du Congo Plan de Réponse Humanitaire 2019,HCOD19,2019-01-01,2019-12-31,2019,4389,Food Security,647900000,275833172,43
+COD,673,République Démocratique du Congo Plan de Réponse Humanitaire 2019,HCOD19,2019-01-01,2019-12-31,2019,4390,Health,212300000,64138391,30
+COD,673,République Démocratique du Congo Plan de Réponse Humanitaire 2019,HCOD19,2019-01-01,2019-12-31,2019,4391,Logistics,44800000,29378955,66
+COD,673,République Démocratique du Congo Plan de Réponse Humanitaire 2019,HCOD19,2019-01-01,2019-12-31,2019,4392,Non-Food Items and Shelter,142700000,11148272,8
+COD,673,République Démocratique du Congo Plan de Réponse Humanitaire 2019,HCOD19,2019-01-01,2019-12-31,2019,4393,Nutrition,160000000,63682918,40
+COD,673,République Démocratique du Congo Plan de Réponse Humanitaire 2019,HCOD19,2019-01-01,2019-12-31,2019,4394,Protection,94900000,32450731,34
+COD,673,République Démocratique du Congo Plan de Réponse Humanitaire 2019,HCOD19,2019-01-01,2019-12-31,2019,4395,Refugee Response,134600000,2518813,2
+COD,673,République Démocratique du Congo Plan de Réponse Humanitaire 2019,HCOD19,2019-01-01,2019-12-31,2019,4396,WASH,131000000,24165598,18
+COD,673,République Démocratique du Congo Plan de Réponse Humanitaire 2019,HCOD19,2019-01-01,2019-12-31,2019,,Not specified,,147024821,
+COD,673,République Démocratique du Congo Plan de Réponse Humanitaire 2019,HCOD19,2019-01-01,2019-12-31,2019,,Multiple clusters/sectors (shared),,72795220,
+COD,652,République Démocratique du Congo Plan de Réponse Humanitaire 2018,HCOD18,2018-01-01,2018-12-31,2018,4196,Cash,13200000,10621173,80
+COD,652,République Démocratique du Congo Plan de Réponse Humanitaire 2018,HCOD18,2018-01-01,2018-12-31,2018,4195,Coordination,16700000,13132787,79
+COD,652,République Démocratique du Congo Plan de Réponse Humanitaire 2018,HCOD18,2018-01-01,2018-12-31,2018,4191,Education,120800000,18359458,15
+COD,652,République Démocratique du Congo Plan de Réponse Humanitaire 2018,HCOD18,2018-01-01,2018-12-31,2018,4194,Emergency Telecommunications,1400000,655138,47
+COD,652,République Démocratique du Congo Plan de Réponse Humanitaire 2018,HCOD18,2018-01-01,2018-12-31,2018,4188,Food Security,580100000,267758869,46
+COD,652,République Démocratique du Congo Plan de Réponse Humanitaire 2018,HCOD18,2018-01-01,2018-12-31,2018,4187,Health,202300000,28746696,14
+COD,652,République Démocratique du Congo Plan de Réponse Humanitaire 2018,HCOD18,2018-01-01,2018-12-31,2018,4193,Logistics,103000000,27989291,27
+COD,652,République Démocratique du Congo Plan de Réponse Humanitaire 2018,HCOD18,2018-01-01,2018-12-31,2018,4189,Non Food Items and Shelter,148800000,11762354,8
+COD,652,République Démocratique du Congo Plan de Réponse Humanitaire 2018,HCOD18,2018-01-01,2018-12-31,2018,4190,Nutrition,197700000,79637041,40
+COD,652,République Démocratique du Congo Plan de Réponse Humanitaire 2018,HCOD18,2018-01-01,2018-12-31,2018,4185,Protection,105900000,40546686,38
+COD,652,République Démocratique du Congo Plan de Réponse Humanitaire 2018,HCOD18,2018-01-01,2018-12-31,2018,4192,Refugees Non-sectoral Response,87000000,42979190,49
+COD,652,République Démocratique du Congo Plan de Réponse Humanitaire 2018,HCOD18,2018-01-01,2018-12-31,2018,4186,WASH,98300000,27319300,28
+COD,652,République Démocratique du Congo Plan de Réponse Humanitaire 2018,HCOD18,2018-01-01,2018-12-31,2018,,Not specified,,183227371,
+COD,652,République Démocratique du Congo Plan de Réponse Humanitaire 2018,HCOD18,2018-01-01,2018-12-31,2018,,Multiple clusters/sectors (shared),,74864095,
+COD,587,République Démocratique du Congo Plan de Réponse Humanitaire 2017,HCOD17,2017-02-13,2017-12-31,2017,3539,Articles menagers essentiels et abris,82310135,4231806,5
+COD,587,République Démocratique du Congo Plan de Réponse Humanitaire 2017,HCOD17,2017-02-13,2017-12-31,2017,3581,Assistance zones a accessibilité réduite,9317817,,
+COD,587,République Démocratique du Congo Plan de Réponse Humanitaire 2017,HCOD17,2017-02-13,2017-12-31,2017,3566,Coordination,16700000,9219752,55
+COD,587,République Démocratique du Congo Plan de Réponse Humanitaire 2017,HCOD17,2017-02-13,2017-12-31,2017,3538,"Eau, hygiene et assainissement",92775845,12075742,13
+COD,587,République Démocratique du Congo Plan de Réponse Humanitaire 2017,HCOD17,2017-02-13,2017-12-31,2017,3540,Education,41726371,4379079,10
+COD,587,République Démocratique du Congo Plan de Réponse Humanitaire 2017,HCOD17,2017-02-13,2017-12-31,2017,3567,Interventions monétaires à usages multiples,13200000,,
+COD,587,République Démocratique du Congo Plan de Réponse Humanitaire 2017,HCOD17,2017-02-13,2017-12-31,2017,3541,Logistique,85464013,36171184,42
+COD,587,République Démocratique du Congo Plan de Réponse Humanitaire 2017,HCOD17,2017-02-13,2017-12-31,2017,3542,Nutrition,82508598,18738348,23
+COD,587,République Démocratique du Congo Plan de Réponse Humanitaire 2017,HCOD17,2017-02-13,2017-12-31,2017,3543,Protection,89704303,40172655,45
+COD,587,République Démocratique du Congo Plan de Réponse Humanitaire 2017,HCOD17,2017-02-13,2017-12-31,2017,3565,Réponse non sectorielle pour les réfugiés,12256992,14400808,117
+COD,587,République Démocratique du Congo Plan de Réponse Humanitaire 2017,HCOD17,2017-02-13,2017-12-31,2017,3545,Sante,72254474,37466532,52
+COD,587,République Démocratique du Congo Plan de Réponse Humanitaire 2017,HCOD17,2017-02-13,2017-12-31,2017,3546,Securite alimentaire,214395749,130019007,61
+COD,587,République Démocratique du Congo Plan de Réponse Humanitaire 2017,HCOD17,2017-02-13,2017-12-31,2017,,Not specified,,159119967,
+COD,587,République Démocratique du Congo Plan de Réponse Humanitaire 2017,HCOD17,2017-02-13,2017-12-31,2017,,Multiple clusters/sectors (shared),,12229216,
+COD,511,République Démocratique du Congo Plan de Réponse Humanitaire 2016,HCOD16,2016-01-01,2016-12-31,2016,140,Articles ménagers essentiels (AME) et Abris d’urgence,72700000,6746195,9
+COD,511,République Démocratique du Congo Plan de Réponse Humanitaire 2016,HCOD16,2016-01-01,2016-12-31,2016,146,Assistance multisectorielle aux réfugiés,65000000,12911587,20
+COD,511,République Démocratique du Congo Plan de Réponse Humanitaire 2016,HCOD16,2016-01-01,2016-12-31,2016,147,Coordination,18600000,17002593,91
+COD,511,République Démocratique du Congo Plan de Réponse Humanitaire 2016,HCOD16,2016-01-01,2016-12-31,2016,141,"Eau, Hygiène et Assainissement",67900000,20471818,30
+COD,511,République Démocratique du Congo Plan de Réponse Humanitaire 2016,HCOD16,2016-01-01,2016-12-31,2016,138,Education,36500000,4992067,14
+COD,511,République Démocratique du Congo Plan de Réponse Humanitaire 2016,HCOD16,2016-01-01,2016-12-31,2016,139,Logistique,80300000,39589854,49
+COD,511,République Démocratique du Congo Plan de Réponse Humanitaire 2016,HCOD16,2016-01-01,2016-12-31,2016,148,Multipurpose cash assistance,13200000,2354846,18
+COD,511,République Démocratique du Congo Plan de Réponse Humanitaire 2016,HCOD16,2016-01-01,2016-12-31,2016,142,Nutrition,55500000,572288,1
+COD,511,République Démocratique du Congo Plan de Réponse Humanitaire 2016,HCOD16,2016-01-01,2016-12-31,2016,143,Protection,48000000,12094225,25
+COD,511,République Démocratique du Congo Plan de Réponse Humanitaire 2016,HCOD16,2016-01-01,2016-12-31,2016,144,Santé,50000000,30299966,61
+COD,511,République Démocratique du Congo Plan de Réponse Humanitaire 2016,HCOD16,2016-01-01,2016-12-31,2016,149,Secteur Non Specifie,,175207137,
+COD,511,République Démocratique du Congo Plan de Réponse Humanitaire 2016,HCOD16,2016-01-01,2016-12-31,2016,145,Sécurité Alimentaire,182300000,127548287,70
+COD,511,République Démocratique du Congo Plan de Réponse Humanitaire 2016,HCOD16,2016-01-01,2016-12-31,2016,,Not specified,,-36719030,
+COD,511,République Démocratique du Congo Plan de Réponse Humanitaire 2016,HCOD16,2016-01-01,2016-12-31,2016,,Multiple clusters/sectors (shared),,1701019,
+COD,457,République Démocratique du Congo Plan de Réponse Stratégique 2015,HCOD15,2015-01-01,2015-12-31,2015,113,BIENS NON ALIMENTAIRES ET ABRIS D'URGENCE,83900000,12288843,15
+COD,457,République Démocratique du Congo Plan de Réponse Stratégique 2015,HCOD15,2015-01-01,2015-12-31,2015,123,COMMON HUMANITARIAN FUND (CHF),,19963630,
+COD,457,République Démocratique du Congo Plan de Réponse Stratégique 2015,HCOD15,2015-01-01,2015-12-31,2015,120,COORDINATION,21000000,14206372,68
+COD,457,République Démocratique du Congo Plan de Réponse Stratégique 2015,HCOD15,2015-01-01,2015-12-31,2015,115,"EAU, HYGIENE ET ASSAINISSEMENT",79200000,22104734,28
+COD,457,République Démocratique du Congo Plan de Réponse Stratégique 2015,HCOD15,2015-01-01,2015-12-31,2015,114,EDUCATION,50000000,7453140,15
+COD,457,République Démocratique du Congo Plan de Réponse Stratégique 2015,HCOD15,2015-01-01,2015-12-31,2015,116,LOGISTIQUE,51000000,35925833,70
+COD,457,République Démocratique du Congo Plan de Réponse Stratégique 2015,HCOD15,2015-01-01,2015-12-31,2015,2774,MULTI CLUSTER,,23410649,
+COD,457,République Démocratique du Congo Plan de Réponse Stratégique 2015,HCOD15,2015-01-01,2015-12-31,2015,121,NUTRITION,75000000,24232013,32
+COD,457,République Démocratique du Congo Plan de Réponse Stratégique 2015,HCOD15,2015-01-01,2015-12-31,2015,117,PROTECTION,42100000,27061433,64
+COD,457,République Démocratique du Congo Plan de Réponse Stratégique 2015,HCOD15,2015-01-01,2015-12-31,2015,122,REPONSE MULTISECTORIELLE AUX BESOINS SPECIFIQUES DES REFUGIES,63000000,50350627,80
+COD,457,République Démocratique du Congo Plan de Réponse Stratégique 2015,HCOD15,2015-01-01,2015-12-31,2015,118,SANTE,43800000,28301037,65
+COD,457,République Démocratique du Congo Plan de Réponse Stratégique 2015,HCOD15,2015-01-01,2015-12-31,2015,124,SECTEUR NON SPECIFIE,,104781138,
+COD,457,République Démocratique du Congo Plan de Réponse Stratégique 2015,HCOD15,2015-01-01,2015-12-31,2015,119,SECURITE ALIMENTAIRE,183000000,118324588,65
+COD,457,République Démocratique du Congo Plan de Réponse Stratégique 2015,HCOD15,2015-01-01,2015-12-31,2015,,Not specified,,-97861421,
+COD,457,République Démocratique du Congo Plan de Réponse Stratégique 2015,HCOD15,2015-01-01,2015-12-31,2015,,Multiple clusters/sectors (shared),,0,
+COD,427,République Démocratique du Congo Plan de Réponse Stratégique 2014,SCOD14,2014-01-01,2014-12-31,2014,2458,BIENS NON ALIMENTAIRES ET ABRIS D'URGENCE,80149215,1624894,2
+COD,427,République Démocratique du Congo Plan de Réponse Stratégique 2014,SCOD14,2014-01-01,2014-12-31,2014,2469,COMMON HUMANITARIAN FUND (CHF),,58974937,
+COD,427,République Démocratique du Congo Plan de Réponse Stratégique 2014,SCOD14,2014-01-01,2014-12-31,2014,2466,COORDINATION,18000000,17374528,97
+COD,427,République Démocratique du Congo Plan de Réponse Stratégique 2014,SCOD14,2014-01-01,2014-12-31,2014,2459,"EAU, HYGIENE ET ASSAINISSEMENT",70639045,13556644,19
+COD,427,République Démocratique du Congo Plan de Réponse Stratégique 2014,SCOD14,2014-01-01,2014-12-31,2014,2460,EDUCATION,57821830,1644280,3
+COD,427,République Démocratique du Congo Plan de Réponse Stratégique 2014,SCOD14,2014-01-01,2014-12-31,2014,2461,LOGISTIQUE,60734754,34061529,56
+COD,427,République Démocratique du Congo Plan de Réponse Stratégique 2014,SCOD14,2014-01-01,2014-12-31,2014,2468,MULTI CLUSTER,,60736029,
+COD,427,République Démocratique du Congo Plan de Réponse Stratégique 2014,SCOD14,2014-01-01,2014-12-31,2014,2462,NUTRITION,89074023,3822103,4
+COD,427,République Démocratique du Congo Plan de Réponse Stratégique 2014,SCOD14,2014-01-01,2014-12-31,2014,2463,PROTECTION,65773590,10159706,15
+COD,427,République Démocratique du Congo Plan de Réponse Stratégique 2014,SCOD14,2014-01-01,2014-12-31,2014,2467,REPONSE MULTISECTORIELLE AUX BESOINS SPECIFIQUES DES REFUGIES,58654585,884354,2
+COD,427,République Démocratique du Congo Plan de Réponse Stratégique 2014,SCOD14,2014-01-01,2014-12-31,2014,2464,SANTE,75000000,17470247,23
+COD,427,République Démocratique du Congo Plan de Réponse Stratégique 2014,SCOD14,2014-01-01,2014-12-31,2014,2470,SECTEUR NON SPECIFIE,,112765147,
+COD,427,République Démocratique du Congo Plan de Réponse Stratégique 2014,SCOD14,2014-01-01,2014-12-31,2014,2465,SECURITE ALIMENTAIRE,256250208,108350371,42
+COD,427,République Démocratique du Congo Plan de Réponse Stratégique 2014,SCOD14,2014-01-01,2014-12-31,2014,,Not specified,,-47233249,
+COD,427,République Démocratique du Congo Plan de Réponse Stratégique 2014,SCOD14,2014-01-01,2014-12-31,2014,,Multiple clusters/sectors (shared),,0,
+COD,403,Democratic Republic of the Congo 2013,CCOD1314,2013-01-01,2014-05-01,2013,1299,BIENS NON ALIMENTAIRES ET ABRIS D'URGENCE,86265744,7287778,8
+COD,403,Democratic Republic of the Congo 2013,CCOD1314,2013-01-01,2014-05-01,2013,1310,COMMON HUMANITARIAN FUND (CHF),,85280615,
+COD,403,Democratic Republic of the Congo 2013,CCOD1314,2013-01-01,2014-05-01,2013,1307,COORDINATION,18625863,16906834,91
+COD,403,Democratic Republic of the Congo 2013,CCOD1314,2013-01-01,2014-05-01,2013,1300,"EAU, HYGIENE ET ASSAINISSEMENT",89364882,28101812,31
+COD,403,Democratic Republic of the Congo 2013,CCOD1314,2013-01-01,2014-05-01,2013,1301,EDUCATION,75852600,6847657,9
+COD,403,Democratic Republic of the Congo 2013,CCOD1314,2013-01-01,2014-05-01,2013,1302,LOGISTIQUE,80892312,41656669,51
+COD,403,Democratic Republic of the Congo 2013,CCOD1314,2013-01-01,2014-05-01,2013,1309,MULTI CLUSTER,,152738877,
+COD,403,Democratic Republic of the Congo 2013,CCOD1314,2013-01-01,2014-05-01,2013,1303,NUTRITION,83530829,20744196,25
+COD,403,Democratic Republic of the Congo 2013,CCOD1314,2013-01-01,2014-05-01,2013,1304,PROTECTION,66661958,20769105,31
+COD,403,Democratic Republic of the Congo 2013,CCOD1314,2013-01-01,2014-05-01,2013,1308,REPONSE MULTISECTORIELLE AUX BESOINS SPECIFIQUES DES REFUGIES,59907828,,
+COD,403,Democratic Republic of the Congo 2013,CCOD1314,2013-01-01,2014-05-01,2013,1305,SANTE,79506600,37995463,48
+COD,403,Democratic Republic of the Congo 2013,CCOD1314,2013-01-01,2014-05-01,2013,1311,SECTEUR NON SPECIFIE,,31144119,
+COD,403,Democratic Republic of the Congo 2013,CCOD1314,2013-01-01,2014-05-01,2013,1306,SECURITE ALIMENTAIRE,252035354,254181083,101
+COD,403,Democratic Republic of the Congo 2013,CCOD1314,2013-01-01,2014-05-01,2013,,Not specified,,-74272375,
+COD,403,Democratic Republic of the Congo 2013,CCOD1314,2013-01-01,2014-05-01,2013,,Multiple clusters/sectors (shared),,0,
+COD,381,Democratic Republic of the Congo 2012,CCOD1213,2012-01-01,2013-03-31,2012,1130,BIENS NON ALIMENTAIRES ET ABRIS D'URGENCE,78961474,12084656,15
+COD,381,Democratic Republic of the Congo 2012,CCOD1213,2012-01-01,2013-03-31,2012,1141,COMMON HUMANITARIAN FUND (CHF),,101521603,
+COD,381,Democratic Republic of the Congo 2012,CCOD1213,2012-01-01,2013-03-31,2012,1138,COORDINATION,16043270,11900968,74
+COD,381,Democratic Republic of the Congo 2012,CCOD1213,2012-01-01,2013-03-31,2012,1131,"EAU, HYGIENE ET ASSAINISSEMENT",79092741,23719527,30
+COD,381,Democratic Republic of the Congo 2012,CCOD1213,2012-01-01,2013-03-31,2012,1132,EDUCATION,75000000,5927883,8
+COD,381,Democratic Republic of the Congo 2012,CCOD1213,2012-01-01,2013-03-31,2012,1133,LOGISTIQUE,68433009,58558322,86
+COD,381,Democratic Republic of the Congo 2012,CCOD1213,2012-01-01,2013-03-31,2012,1140,MULTI CLUSTER,,133819410,
+COD,381,Democratic Republic of the Congo 2012,CCOD1213,2012-01-01,2013-03-31,2012,1134,NUTRITION,67940100,17891652,26
+COD,381,Democratic Republic of the Congo 2012,CCOD1213,2012-01-01,2013-03-31,2012,1135,PROTECTION,65542365,19942903,30
+COD,381,Democratic Republic of the Congo 2012,CCOD1213,2012-01-01,2013-03-31,2012,1139,REPONSE MULTISECTORIELLE AUX BESOINS SPECIFIQUES DES REFUGIES,46112754,,
+COD,381,Democratic Republic of the Congo 2012,CCOD1213,2012-01-01,2013-03-31,2012,1136,SANTE,64607584,33282228,52
+COD,381,Democratic Republic of the Congo 2012,CCOD1213,2012-01-01,2013-03-31,2012,1142,SECTEUR NON SPECIFIE,,4332116,
+COD,381,Democratic Republic of the Congo 2012,CCOD1213,2012-01-01,2013-03-31,2012,1137,SECURITE ALIMENTAIRE,229597729,251123050,109
+COD,381,Democratic Republic of the Congo 2012,CCOD1213,2012-01-01,2013-03-31,2012,,Not specified,,-89672591,
+COD,381,Democratic Republic of the Congo 2012,CCOD1213,2012-01-01,2013-03-31,2012,,Multiple clusters/sectors (shared),,0,
+COD,358,Democratic Republic of the Congo 2011,CCOD1112,2011-01-01,2012-12-31,2011,905,BIENS NON ALIMENTAIRES ET ABRIS D'URGENCE,74833735,10497588,14
+COD,358,Democratic Republic of the Congo 2011,CCOD1112,2011-01-01,2012-12-31,2011,918,COMMON HUMANITARIAN FUND (CHF),,118124887,
+COD,358,Democratic Republic of the Congo 2011,CCOD1112,2011-01-01,2012-12-31,2011,914,COORDINATION,18217548,12847119,71
+COD,358,Democratic Republic of the Congo 2011,CCOD1112,2011-01-01,2012-12-31,2011,906,"EAU, HYGIENE ET ASSAINISSEMENT",95617000,22093021,23
+COD,358,Democratic Republic of the Congo 2011,CCOD1112,2011-01-01,2012-12-31,2011,907,EDUCATION,28800000,5745754,20
+COD,358,Democratic Republic of the Congo 2011,CCOD1112,2011-01-01,2012-12-31,2011,908,LOGISTIQUE,65205738,47988760,74
+COD,358,Democratic Republic of the Congo 2011,CCOD1112,2011-01-01,2012-12-31,2011,917,MULTI CLUSTER,,114125162,
+COD,358,Democratic Republic of the Congo 2011,CCOD1112,2011-01-01,2012-12-31,2011,909,NUTRITION,41090620,20900434,51
+COD,358,Democratic Republic of the Congo 2011,CCOD1112,2011-01-01,2012-12-31,2011,910,PROTECTION,55783657,30935557,55
+COD,358,Democratic Republic of the Congo 2011,CCOD1112,2011-01-01,2012-12-31,2011,912,RELEVEMENT PRECOCE,0,,
+COD,358,Democratic Republic of the Congo 2011,CCOD1112,2011-01-01,2012-12-31,2011,915,REPONSE MULTISECTORIELLE AUX BESOINS SPECIFIQUES DES REFUGIES,17420000,,
+COD,358,Democratic Republic of the Congo 2011,CCOD1112,2011-01-01,2012-12-31,2011,911,SANTE,43785800,32619699,74
+COD,358,Democratic Republic of the Congo 2011,CCOD1112,2011-01-01,2012-12-31,2011,913,SECURITE ALIMENTAIRE,295000000,179750996,61
+COD,358,Democratic Republic of the Congo 2011,CCOD1112,2011-01-01,2012-12-31,2011,,Not specified,,-107237274,
+COD,358,Democratic Republic of the Congo 2011,CCOD1112,2011-01-01,2012-12-31,2011,,Multiple clusters/sectors (shared),,0,
+COD,324,Democratic Republic of the Congo 2010,CCOD10,2010-01-01,2010-12-31,2010,723,BIENS NON ALIMENTAIRES ET ABRIS D'URGENCE,90394179,15242445,17
+COD,324,Democratic Republic of the Congo 2010,CCOD10,2010-01-01,2010-12-31,2010,735,COMMON HUMANITARIAN FUND (CHF),,98895799,
+COD,324,Democratic Republic of the Congo 2010,CCOD10,2010-01-01,2010-12-31,2010,732,COORDINATION ,18093541,18545813,102
+COD,324,Democratic Republic of the Congo 2010,CCOD10,2010-01-01,2010-12-31,2010,724,"EAU, HYGIENE ET ASSAINISSEMENT",115659000,26475875,23
+COD,324,Democratic Republic of the Congo 2010,CCOD10,2010-01-01,2010-12-31,2010,725,EDUCATION ,25065000,6346258,25
+COD,324,Democratic Republic of the Congo 2010,CCOD10,2010-01-01,2010-12-31,2010,726,LOGISTIQUE,48602281,34953775,72
+COD,324,Democratic Republic of the Congo 2010,CCOD10,2010-01-01,2010-12-31,2010,734,MULTI CLUSTER PROJECTS,,78186630,
+COD,324,Democratic Republic of the Congo 2010,CCOD10,2010-01-01,2010-12-31,2010,727,NUTRITION,57614000,16788059,29
+COD,324,Democratic Republic of the Congo 2010,CCOD10,2010-01-01,2010-12-31,2010,728,PROTECTION,87757627,28644790,33
+COD,324,Democratic Republic of the Congo 2010,CCOD10,2010-01-01,2010-12-31,2010,730,REINTEGRATION ET RELEVEMENT COMMUNAUTAIRE,23318000,5563695,24
+COD,324,Democratic Republic of the Congo 2010,CCOD10,2010-01-01,2010-12-31,2010,729,SANTE,60518890,24183597,40
+COD,324,Democratic Republic of the Congo 2010,CCOD10,2010-01-01,2010-12-31,2010,733,SECTOR NOT YET SPECIFIED ,,43126171,
+COD,324,Democratic Republic of the Congo 2010,CCOD10,2010-01-01,2010-12-31,2010,731,SECURITE ALIMENTAIRE,300594110,217589919,72
+COD,324,Democratic Republic of the Congo 2010,CCOD10,2010-01-01,2010-12-31,2010,,Not specified,,-93515961,
+COD,324,Democratic Republic of the Congo 2010,CCOD10,2010-01-01,2010-12-31,2010,,Multiple clusters/sectors (shared),,0,
+COD,309,Democratic Republic of the Congo 2009,CCOD09,2009-01-01,2009-12-30,2009,604,Biens non alimentaires et abris d’urgence ,80834555,18684546,23
+COD,309,Democratic Republic of the Congo 2009,CCOD09,2009-01-01,2009-12-30,2009,606,Coordination ,11792536,13224884,112
+COD,309,Democratic Republic of the Congo 2009,CCOD09,2009-01-01,2009-12-30,2009,607,"Eau, hygiène et assainissement",117331895,30957064,26
+COD,309,Democratic Republic of the Congo 2009,CCOD09,2009-01-01,2009-12-30,2009,608,Education ,24673708,6724124,27
+COD,309,Democratic Republic of the Congo 2009,CCOD09,2009-01-01,2009-12-30,2009,609,Logistique ,63742327,42311390,66
+COD,309,Democratic Republic of the Congo 2009,CCOD09,2009-01-01,2009-12-30,2009,616,Multi-sector,,64663471,
+COD,309,Democratic Republic of the Congo 2009,CCOD09,2009-01-01,2009-12-30,2009,610,Nutrition ,65341699,11951211,18
+COD,309,Democratic Republic of the Congo 2009,CCOD09,2009-01-01,2009-12-30,2009,611,Protection ,91974092,14709529,16
+COD,309,Democratic Republic of the Congo 2009,CCOD09,2009-01-01,2009-12-30,2009,612,Relèvement communautaire ,40787000,1173324,3
+COD,309,Democratic Republic of the Congo 2009,CCOD09,2009-01-01,2009-12-30,2009,613,Santé ,76122249,35182867,46
+COD,309,Democratic Republic of the Congo 2009,CCOD09,2009-01-01,2009-12-30,2009,614,Sécurité alimentaire ,373652181,294828619,79
+COD,309,Democratic Republic of the Congo 2009,CCOD09,2009-01-01,2009-12-30,2009,,Not specified,,109990648,
+COD,309,Democratic Republic of the Congo 2009,CCOD09,2009-01-01,2009-12-30,2009,,Multiple clusters/sectors (shared),,0,
+COD,268,Democratic Republic of the Congo 2008 Humanitarian Action Plan,CCOD08,2008-01-01,2008-12-31,2008,423,ABRIS & NFI,64664202,10439382,16
+COD,268,Democratic Republic of the Congo 2008 Humanitarian Action Plan,CCOD08,2008-01-01,2008-12-31,2008,425,COORDINATION,17989998,21706806,121
+COD,268,Democratic Republic of the Congo 2008 Humanitarian Action Plan,CCOD08,2008-01-01,2008-12-31,2008,426,EAU ET ASSAINISSEMENT,84799550,26700784,31
+COD,268,Democratic Republic of the Congo 2008 Humanitarian Action Plan,CCOD08,2008-01-01,2008-12-31,2008,427,EDUCATION,25016661,9656102,39
+COD,268,Democratic Republic of the Congo 2008 Humanitarian Action Plan,CCOD08,2008-01-01,2008-12-31,2008,438,EMERGENCY TELECOMMUNICATIONS,405000,,
+COD,268,Democratic Republic of the Congo 2008 Humanitarian Action Plan,CCOD08,2008-01-01,2008-12-31,2008,428,FOOD SECURITY,,6735005,
+COD,268,Democratic Republic of the Congo 2008 Humanitarian Action Plan,CCOD08,2008-01-01,2008-12-31,2008,429,HEALTH,84541134,37443931,44
+COD,268,Democratic Republic of the Congo 2008 Humanitarian Action Plan,CCOD08,2008-01-01,2008-12-31,2008,430,LOGISTICS,52016694,21596670,42
+COD,268,Democratic Republic of the Congo 2008 Humanitarian Action Plan,CCOD08,2008-01-01,2008-12-31,2008,431,MULTI-SECTOR,,40088156,
+COD,268,Democratic Republic of the Congo 2008 Humanitarian Action Plan,CCOD08,2008-01-01,2008-12-31,2008,432,NUTRITION,63687146,15779153,25
+COD,268,Democratic Republic of the Congo 2008 Humanitarian Action Plan,CCOD08,2008-01-01,2008-12-31,2008,433,PROTECTION,34859680,6847106,20
+COD,268,Democratic Republic of the Congo 2008 Humanitarian Action Plan,CCOD08,2008-01-01,2008-12-31,2008,434,RECOVERY & REINTEGRATION,,1532237,
+COD,268,Democratic Republic of the Congo 2008 Humanitarian Action Plan,CCOD08,2008-01-01,2008-12-31,2008,435,RETOUR ET RELEVEMENT,28547379,7306293,26
+COD,268,Democratic Republic of the Congo 2008 Humanitarian Action Plan,CCOD08,2008-01-01,2008-12-31,2008,436,SECURITE ALIMENTAIRE,279984321,46817783,17
+COD,268,Democratic Republic of the Congo 2008 Humanitarian Action Plan,CCOD08,2008-01-01,2008-12-31,2008,437,SHELTER AND NON-FOOD ITEMS,,10088683,
+COD,268,Democratic Republic of the Congo 2008 Humanitarian Action Plan,CCOD08,2008-01-01,2008-12-31,2008,,Not specified,,344526698,
+COD,268,Democratic Republic of the Congo 2008 Humanitarian Action Plan,CCOD08,2008-01-01,2008-12-31,2008,,Multiple clusters/sectors (shared),,0,
+COD,232,Democratic Republic of the Congo 2007 Humanitarian Action Plan,CCOD07,2007-01-01,2007-12-31,2007,325,COORDINATION,14724225,41327370,281
+COD,232,Democratic Republic of the Congo 2007 Humanitarian Action Plan,CCOD07,2007-01-01,2007-12-31,2007,326,EDUCATION,26851844,5795009,22
+COD,232,Democratic Republic of the Congo 2007 Humanitarian Action Plan,CCOD07,2007-01-01,2007-12-31,2007,327,EMERGENCY SHELTER,43017000,6789364,16
+COD,232,Democratic Republic of the Congo 2007 Humanitarian Action Plan,CCOD07,2007-01-01,2007-12-31,2007,328,EMERGENCY TELECOMMUNICATIONS,674965,,
+COD,232,Democratic Republic of the Congo 2007 Humanitarian Action Plan,CCOD07,2007-01-01,2007-12-31,2007,329,FOOD SECURITY,196215562,170373539,87
+COD,232,Democratic Republic of the Congo 2007 Humanitarian Action Plan,CCOD07,2007-01-01,2007-12-31,2007,330,HEALTH,98763353,43701908,44
+COD,232,Democratic Republic of the Congo 2007 Humanitarian Action Plan,CCOD07,2007-01-01,2007-12-31,2007,331,LOGISTICS,85427755,18769970,22
+COD,232,Democratic Republic of the Congo 2007 Humanitarian Action Plan,CCOD07,2007-01-01,2007-12-31,2007,332,MINE ACTION,,1493844,
+COD,232,Democratic Republic of the Congo 2007 Humanitarian Action Plan,CCOD07,2007-01-01,2007-12-31,2007,333,MULTI-SECTOR,,34205583,
+COD,232,Democratic Republic of the Congo 2007 Humanitarian Action Plan,CCOD07,2007-01-01,2007-12-31,2007,334,NUTRITION,24940418,7888485,32
+COD,232,Democratic Republic of the Congo 2007 Humanitarian Action Plan,CCOD07,2007-01-01,2007-12-31,2007,335,PROTECTION,66737985,30460786,46
+COD,232,Democratic Republic of the Congo 2007 Humanitarian Action Plan,CCOD07,2007-01-01,2007-12-31,2007,336,RECOVERY & REINTEGRATION,29307000,13577422,46
+COD,232,Democratic Republic of the Congo 2007 Humanitarian Action Plan,CCOD07,2007-01-01,2007-12-31,2007,338,SHELTER,99931000,25513424,26
+COD,232,Democratic Republic of the Congo 2007 Humanitarian Action Plan,CCOD07,2007-01-01,2007-12-31,2007,337,SHELTER,,4784273,
+COD,232,Democratic Republic of the Congo 2007 Humanitarian Action Plan,CCOD07,2007-01-01,2007-12-31,2007,,Not specified,,59137058,
+COD,232,Democratic Republic of the Congo 2007 Humanitarian Action Plan,CCOD07,2007-01-01,2007-12-31,2007,,Multiple clusters/sectors (shared),,0,
+COD,206,Democratic Republic of the Congo Action Plan 2006,CCOD06,2006-01-01,2006-12-31,2006,254,COORDINATION,40038496,35568942,89
+COD,206,Democratic Republic of the Congo Action Plan 2006,CCOD06,2006-01-01,2006-12-31,2006,255,EDUCATION,24034058,7649155,32
+COD,206,Democratic Republic of the Congo Action Plan 2006,CCOD06,2006-01-01,2006-12-31,2006,256,EMERGENCY SHELTER,14285800,6172648,43
+COD,206,Democratic Republic of the Congo Action Plan 2006,CCOD06,2006-01-01,2006-12-31,2006,257,EMERGENCY TELECOMMUNICATIONS,68020,68020,100
+COD,206,Democratic Republic of the Congo Action Plan 2006,CCOD06,2006-01-01,2006-12-31,2006,258,FOOD,183417847,115100232,63
+COD,206,Democratic Republic of the Congo Action Plan 2006,CCOD06,2006-01-01,2006-12-31,2006,259,FOOD SECURITY,3211045,3211045,100
+COD,206,Democratic Republic of the Congo Action Plan 2006,CCOD06,2006-01-01,2006-12-31,2006,260,HEALTH,160595645,47371407,29
+COD,206,Democratic Republic of the Congo Action Plan 2006,CCOD06,2006-01-01,2006-12-31,2006,261,LOGISTICS,26586795,21634059,81
+COD,206,Democratic Republic of the Congo Action Plan 2006,CCOD06,2006-01-01,2006-12-31,2006,262,MINE ACTION,286539,286539,100
+COD,206,Democratic Republic of the Congo Action Plan 2006,CCOD06,2006-01-01,2006-12-31,2006,263,NUTRITION,30404740,17925677,59
+COD,206,Democratic Republic of the Congo Action Plan 2006,CCOD06,2006-01-01,2006-12-31,2006,264,PROTECTION,59693472,25636431,43
+COD,206,Democratic Republic of the Congo Action Plan 2006,CCOD06,2006-01-01,2006-12-31,2006,265,RECOVERY & REINTEGRATION,124530298,49912803,40
+COD,206,Democratic Republic of the Congo Action Plan 2006,CCOD06,2006-01-01,2006-12-31,2006,266,WATER & SANITATION,28871973,14023586,49
+COD,206,Democratic Republic of the Congo Action Plan 2006,CCOD06,2006-01-01,2006-12-31,2006,,Not specified,,9634694,
+COD,206,Democratic Republic of the Congo Action Plan 2006,CCOD06,2006-01-01,2006-12-31,2006,,Multiple clusters/sectors (shared),,0,
+COD,163,Democratic Republic of the Congo 2005,CCOD05,2005-01-01,2005-12-31,2005,,Not specified,,142656881,
+COD,163,Democratic Republic of the Congo 2005,CCOD05,2005-01-01,2005-12-31,2005,,Multiple clusters/sectors (shared),,0,
+COD,144,Democratic Republic of the Congo 2004,CCOD04,2004-01-01,2004-12-31,2004,,Not specified,,118811355,
+COD,144,Democratic Republic of the Congo 2004,CCOD04,2004-01-01,2004-12-31,2004,,Multiple clusters/sectors (shared),,0,
+COD,113,Democratic Republic of the Congo 2003,CCOD03,2003-01-01,2003-12-31,2003,,Not specified,,108171010,
+COD,113,Democratic Republic of the Congo 2003,CCOD03,2003-01-01,2003-12-31,2003,,Multiple clusters/sectors (shared),,0,
+COD,88,Democratic Republic of the Congo 2002,CCOD02,2002-01-01,2002-12-31,2002,,Not specified,,98431642,
+COD,88,Democratic Republic of the Congo 2002,CCOD02,2002-01-01,2002-12-31,2002,,Multiple clusters/sectors (shared),,0,
+COD,40,Democratic Republic of the Congo 2001,CCOD01,2001-01-01,2001-12-31,2001,,Not specified,,83132706,
+COD,40,Democratic Republic of the Congo 2001,CCOD01,2001-01-01,2001-12-31,2001,,Multiple clusters/sectors (shared),,0,
+COD,51,Democratic Republic of the Congo 2000,CCOD00,2000-01-01,2000-12-31,2000,,Not specified,,11772710,
+COD,51,Democratic Republic of the Congo 2000,CCOD00,2000-01-01,2000-12-31,2000,,Multiple clusters/sectors (shared),,0,

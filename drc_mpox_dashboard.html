@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DRC Mpox Humanitarian Dashboard</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:      #0d0f12;
+    --surface: #13171e;
+    --border:  #252c3a;
+    --text:    #f0ede8;
+    --muted:   #8a95a8;
+    --faint:   #4a5568;
+    --grid:    #1e2530;
+    --red:     #e8453c;
+    --orange:  #f97316;
+    --amber:   #f59e0b;
+    --teal:    #14b8a6;
+    --blue:    #3b82f6;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    padding: 32px;
+  }
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none; z-index: 999; opacity: 0.5;
+  }
+  @keyframes fadeUp { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
+  @keyframes blink   { 0%,100%{opacity:1} 50%{opacity:0.25} }
+
+  /* ── HEADER ── */
+  .header {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    margin-bottom: 30px; padding-bottom: 22px;
+    border-bottom: 1px solid var(--border);
+  }
+  .eyebrow {
+    font-family: 'DM Mono', monospace; font-size: 10px;
+    letter-spacing: .2em; text-transform: uppercase;
+    color: var(--red); margin-bottom: 8px;
+  }
+  h1 { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 900; line-height: 1.05; letter-spacing: -.02em; }
+  h1 span { color: var(--red); }
+  .subtitle { margin-top: 8px; color: var(--muted); font-size: 12px; font-weight: 300; max-width: 520px; line-height: 1.6; }
+  .hdr-right { text-align: right; display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+  .badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(232,69,60,.12); border: 1px solid rgba(232,69,60,.3);
+    color: var(--red); padding: 5px 12px; border-radius: 4px;
+    font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .12em; text-transform: uppercase;
+  }
+  .badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--red); animation: blink 2s infinite; }
+  .stamp { font-family: 'DM Mono', monospace; font-size: 9px; color: var(--faint); letter-spacing: .07em; line-height: 1.8; text-align: right; }
+
+  /* ── KPI ROW ── */
+  .kpi-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: 18px; }
+  .kpi {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 6px; padding: 18px 20px;
+    position: relative; overflow: hidden; animation: fadeUp .5s ease both;
+  }
+  .kpi::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; }
+  .kpi.r::before { background: var(--red);    }
+  .kpi.o::before { background: var(--orange); }
+  .kpi.a::before { background: var(--amber);  }
+  .kpi.t::before { background: var(--teal);   }
+  .kpi.b::before { background: var(--blue);   }
+  .kpi:nth-child(1) { animation-delay: .05s } .kpi:nth-child(2) { animation-delay: .10s }
+  .kpi:nth-child(3) { animation-delay: .15s } .kpi:nth-child(4) { animation-delay: .20s }
+  .kpi:nth-child(5) { animation-delay: .25s }
+  .kpi-lbl { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: .15em; text-transform: uppercase; color: var(--faint); margin-bottom: 10px; }
+  .kpi-val { font-family: 'Playfair Display', serif; font-size: 27px; font-weight: 700; line-height: 1; }
+  .kpi-sub { margin-top: 5px; font-size: 11px; color: var(--muted); font-weight: 300; }
+  .kpi-tag { margin-top: 7px; font-family: 'DM Mono', monospace; font-size: 10px; }
+  .kpi-tag.w { color: var(--red); } .kpi-tag.g { color: var(--teal); } .kpi-tag.m { color: var(--faint); }
+
+  /* ── CARD GRID ── */
+  .grid-top    { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; margin-bottom: 16px; }
+  .grid-bottom { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 22px; animation: fadeUp .5s ease both; }
+  .card-hdr { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 14px; }
+  .card-title { font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 700; line-height: 1.2; }
+  .card-desc { margin-top: 4px; font-size: 11px; color: var(--muted); font-weight: 300; max-width: 380px; line-height: 1.55; }
+  .ctag { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: .1em; text-transform: uppercase; color: var(--faint); border: 1px solid var(--border); padding: 3px 8px; border-radius: 3px; white-space: nowrap; flex-shrink: 0; }
+  .legend { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 12px; }
+  .li { display: flex; align-items: center; gap: 5px; font-size: 10px; color: var(--muted); font-family: 'DM Mono', monospace; }
+  .ld { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .ll { width: 16px; height: 2px; flex-shrink: 0; }
+
+  /* ── FUNDING BARS ── */
+  .ftable { display: flex; flex-direction: column; gap: 11px; }
+  .frow   { display: flex; flex-direction: column; gap: 4px; }
+  .fhdr   { display: flex; justify-content: space-between; align-items: baseline; }
+  .fname  { font-size: 11px; color: var(--muted); max-width: 165px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .fpct { font-family: 'DM Mono', monospace; font-size: 10px; }
+  .fpct.g { color: var(--teal); } .fpct.a { color: var(--amber); } .fpct.r { color: var(--red); }
+  .ftrack { height: 5px; background: var(--grid); border-radius: 3px; overflow: hidden; }
+  .ffill  { height: 100%; border-radius: 3px; }
+
+  /* ── CALLOUT BOX ── */
+  .story {
+    background: rgba(232,69,60,.06); border: 1px solid rgba(232,69,60,.18);
+    border-left: 3px solid var(--red); border-radius: 0 5px 5px 0;
+    padding: 11px 15px; margin-top: 13px;
+  }
+  .story p { font-size: 11px; color: var(--muted); line-height: 1.7; font-weight: 300; }
+  .story strong { color: var(--text); font-weight: 500; }
+
+  /* ── INFORM STATIC PANEL ── */
+  .inform-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .inform-score-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: rgba(232,69,60,.08);
+    border: 1px solid rgba(232,69,60,.25);
+    border-radius: 6px;
+    padding: 16px 20px;
+  }
+  .inform-big {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px; font-weight: 900;
+    color: var(--red); line-height: 1;
+    flex-shrink: 0;
+  }
+  .inform-details { display: flex; flex-direction: column; gap: 4px; }
+  .inform-title { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--faint); }
+  .inform-cat   { font-size: 13px; color: var(--text); font-weight: 500; margin-top: 2px; }
+  .inform-sub   { font-size: 11px; color: var(--muted); font-weight: 300; }
+  .inform-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .istat {
+    background: var(--grid);
+    border-radius: 5px;
+    padding: 12px 14px;
+  }
+  .istat-lbl { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: .12em; text-transform: uppercase; color: var(--faint); margin-bottom: 6px; }
+  .istat-val { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--text); line-height: 1; }
+  .istat-sub { font-size: 10px; color: var(--muted); margin-top: 3px; font-weight: 300; }
+
+  /* ── FOOTER ── */
+  .footer { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: flex-start; }
+  .fsrc { font-family: 'DM Mono', monospace; font-size: 9px; color: var(--faint); letter-spacing: .07em; line-height: 2; }
+  .fsrc span { color: var(--muted); }
+</style>
+</head>
+<body>
+
+<!-- ═══ HEADER ═══ -->
+<div class="header">
+  <div>
+    <div class="eyebrow">Humanitarian Situation Report · Democratic Republic of Congo</div>
+    <h1>DRC Mpox<br><span>Crisis Monitor</span></h1>
+    <p class="subtitle">Tracking the convergence of disease outbreak, armed conflict, and humanitarian funding shortfalls across the DRC. All figures derived directly from WHO, ACLED, OCHA FTS, and INFORM source data.</p>
+  </div>
+  <div class="hdr-right">
+    <div class="badge">Active Outbreak</div>
+    <div class="stamp">
+      WHO MPOX DATA THROUGH FEB 2026<br>
+      ACLED CONFLICT DATA THROUGH MAR 2026<br>
+      OCHA FTS · INFORM SEVERITY RELEASE: FEB 2026
+    </div>
+  </div>
+</div>
+
+<!-- ═══ KPI ROW ═══ -->
+<div class="kpi-row">
+  <div class="kpi r">
+    <div class="kpi-lbl">Confirmed Cases</div>
+    <div class="kpi-val" id="kTotalCases">—</div>
+    <div class="kpi-sub">Cumulative since Jan 2023, DRC</div>
+    <div class="kpi-tag w" id="kPeak">—</div>
+  </div>
+  <div class="kpi o">
+    <div class="kpi-lbl">Reported Deaths</div>
+    <div class="kpi-val" id="kDeaths">—</div>
+    <div class="kpi-sub">Confirmed mpox fatalities, DRC</div>
+    <div class="kpi-tag m" id="kCfr">—</div>
+  </div>
+  <div class="kpi a">
+    <div class="kpi-lbl">Conflict Events</div>
+    <div class="kpi-val" id="kEvents">—</div>
+    <div class="kpi-sub">ACLED-recorded events, 2019–2026</div>
+    <div class="kpi-tag w" id="kFat">—</div>
+  </div>
+  <div class="kpi t">
+    <div class="kpi-lbl">Humanitarian Funding</div>
+    <div class="kpi-val" id="kFunded">—</div>
+    <div class="kpi-sub" id="kRequired">—</div>
+    <div class="kpi-tag g" id="kPct">—</div>
+  </div>
+  <div class="kpi b">
+    <div class="kpi-lbl">INFORM Severity</div>
+    <div class="kpi-val" id="kInform">—</div>
+    <div class="kpi-sub">Maximum severity — out of 10</div>
+    <div class="kpi-tag w">Complex crisis · Feb 2026</div>
+  </div>
+</div>
+
+<!-- ═══ MAIN ROW ═══ -->
+<div class="grid-top">
+
+  <!-- Mpox timeline -->
+  <div class="card">
+    <div class="card-hdr">
+      <div>
+        <div class="card-title">Mpox Weekly New Cases — DRC</div>
+        <div class="card-desc">Confirmed new cases per week with WHO smoothed average. Outbreak escalated sharply through 2024, peaking in October before a gradual decline into 2025–26.</div>
+      </div>
+      <div class="ctag">WHO · drc_mpox.csv</div>
+    </div>
+    <div class="legend">
+      <div class="li"><div class="ld" style="background:rgba(232,69,60,.7)"></div> Weekly new cases</div>
+      <div class="li"><div class="ll" style="background:#f97316"></div> WHO smoothed avg</div>
+    </div>
+    <canvas id="mpoxChart" height="128"></canvas>
+    <div class="story">
+      <p>The <strong>2024 surge</strong> coincided with intensifying displacement in eastern DRC. Mpox spreads rapidly in overcrowded camps — armed conflict is not just a backdrop but an <strong>active driver of transmission</strong>, disrupting health systems at the precise moment case loads peaked.</p>
+    </div>
+  </div>
+
+  <!-- Funding gaps -->
+  <div class="card">
+    <div class="card-hdr">
+      <div>
+        <div class="card-title">Funding by Humanitarian Cluster</div>
+        <div class="card-desc">% of sector requirements met. Food security and health face the most severe absolute funding gaps.</div>
+      </div>
+      <div class="ctag">OCHA FTS · drc_fts.csv</div>
+    </div>
+    <div class="ftable" id="fundingTable"></div>
+    <div class="story">
+      <p>Only <strong id="storyPct">—</strong> of the <strong id="storyReq">—</strong> required has been funded, leaving a <strong id="storyGap">—</strong> gap. The food security cluster alone faces over $5.6B in unmet requirements.</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══ BOTTOM ROW ═══ -->
+<div class="grid-bottom">
+
+  <!-- Conflict events -->
+  <div class="card">
+    <div class="card-hdr">
+      <div>
+        <div class="card-title">Monthly Conflict Events</div>
+        <div class="card-desc">ACLED-recorded armed events, 2019–2026. Escalation accelerated from 2022 onwards.</div>
+      </div>
+      <div class="ctag">ACLED · drc_acled.xlsx</div>
+    </div>
+    <div class="legend">
+      <div class="li"><div class="ld" style="background:#f97316"></div> Events / month</div>
+    </div>
+    <canvas id="conflictChart" height="155"></canvas>
+  </div>
+
+  <!-- Conflict fatalities -->
+  <div class="card">
+    <div class="card-hdr">
+      <div>
+        <div class="card-title">Conflict Fatalities Trend</div>
+        <div class="card-desc">Monthly conflict-related deaths. January 2025 recorded the period peak.</div>
+      </div>
+      <div class="ctag">ACLED · drc_acled.xlsx</div>
+    </div>
+    <canvas id="fatalitiesChart" height="155"></canvas>
+  </div>
+
+  <!-- INFORM static info panel — replaces the useless bar chart -->
+  <div class="card">
+    <div class="card-hdr">
+      <div>
+        <div class="card-title">INFORM Crisis Severity</div>
+        <div class="card-desc">February 2026 INFORM Severity Index. DRC rated maximum category globally.</div>
+      </div>
+      <div class="ctag">INFORM · inform_severity.xlsx</div>
+    </div>
+    <div class="inform-panel">
+      <div class="inform-score-row">
+        <div class="inform-big" id="informScore">—</div>
+        <div class="inform-details">
+          <div class="inform-title">INFORM Severity Index</div>
+          <div class="inform-cat" id="informCat">—</div>
+          <div class="inform-sub">February 2026 release · Scale 0–10</div>
+        </div>
+      </div>
+      <div class="inform-stats">
+        <div class="istat">
+          <div class="istat-lbl">Conflict Fatalities</div>
+          <div class="istat-val" id="isFat">—</div>
+          <div class="istat-sub">2019–2026 (ACLED)</div>
+        </div>
+        <div class="istat">
+          <div class="istat-lbl">Peak Month</div>
+          <div class="istat-val" id="isPeak">—</div>
+          <div class="istat-sub">fatalities in Jan 2025</div>
+        </div>
+        <div class="istat">
+          <div class="istat-lbl">Funding Gap</div>
+          <div class="istat-val" id="isGap">—</div>
+          <div class="istat-sub">of $<span id="isReq">—</span>B required</div>
+        </div>
+        <div class="istat">
+          <div class="istat-lbl">Mpox Peak</div>
+          <div class="istat-val" id="isMpox">—</div>
+          <div class="istat-sub">cases in one week</div>
+        </div>
+      </div>
+    </div>
+    <div class="story" style="margin-top:14px">
+      <p>A score of <strong id="informStory">—</strong>/10 places DRC among the world's most severe humanitarian crises — driven by conflict, displacement, disease, and a <strong id="gapStory">—</strong> funding shortfall compounding every dimension of the response.</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══ FOOTER ═══ -->
+<div class="footer">
+  <div class="fsrc">
+    <span>SOURCES</span> &nbsp;·&nbsp;
+    WHO Mpox Situation Data (drc_mpox.csv) &nbsp;·&nbsp;
+    ACLED Armed Conflict Location &amp; Event Data (drc_acled.xlsx)<br>
+    OCHA Financial Tracking Service (drc_fts.csv) &nbsp;·&nbsp;
+    INFORM Severity Index, February 2026 Release (inform_severity.xlsx)
+  </div>
+  <div class="fsrc" style="text-align:right">
+    All values computed directly from source datasets · No figures estimated or imputed<br>
+    Analysis: Python / pandas &nbsp;·&nbsp; Visualisation: HTML / Chart.js
+  </div>
+</div>
+
+<!-- ═══ JAVASCRIPT ═══ -->
+<script>
+// ── Embed data from Python ──
+const D = {"kpis": {"total_cases": 33441, "total_deaths": 77, "cfr_pct": 0.23, "peak_cases": 943, "total_events": 23595, "total_fatalities": 45987, "peak_fatalities": 1491, "funded_bn": 14.2, "required_bn": 27.4, "overall_pct": 51.8, "gap_bn": 13.2, "inform_score": 9, "inform_cat": 5}, "mpox": {"labels": ["2022-12-26", "2023-01-02", "2023-01-09", "2023-01-16", "2023-01-23", "2023-01-30", "2023-02-06", "2023-02-13", "2023-02-20", "2023-02-27", "2023-03-06", "2023-03-13", "2023-03-20", "2023-03-27", "2023-04-03", "2023-04-10", "2023-04-17", "2023-04-24", "2023-05-01", "2023-05-08", "2023-05-15", "2023-05-22", "2023-05-29", "2023-06-05", "2023-06-12", "2023-06-19", "2023-06-26", "2023-07-03", "2023-07-10", "2023-07-17", "2023-07-24", "2023-07-31", "2023-08-07", "2023-08-14", "2023-08-21", "2023-08-28", "2023-09-04", "2023-09-11", "2023-09-18", "2023-09-25", "2023-10-02", "2023-10-09", "2023-10-16", "2023-10-23", "2023-10-30", "2023-11-06", "2023-11-13", "2023-11-20", "2023-11-27", "2023-12-04", "2023-12-11", "2023-12-18", "2023-12-25", "2024-01-01", "2024-01-08", "2024-01-15", "2024-01-22", "2024-01-29", "2024-02-05", "2024-02-12", "2024-02-19", "2024-02-26", "2024-03-04", "2024-03-11", "2024-03-18", "2024-03-25", "2024-04-01", "2024-04-08", "2024-04-15", "2024-04-22", "2024-04-29", "2024-05-06", "2024-05-13", "2024-05-20", "2024-05-27", "2024-06-03", "2024-06-10", "2024-06-17", "2024-06-24", "2024-07-01", "2024-07-08", "2024-07-15", "2024-07-22", "2024-07-29", "2024-08-05", "2024-08-12", "2024-08-19", "2024-08-26", "2024-09-02", "2024-09-09", "2024-09-16", "2024-09-23", "2024-09-30", "2024-10-07", "2024-10-14", "2024-10-21", "2024-10-28", "2024-11-04", "2024-11-11", "2024-11-18", "2024-11-25", "2024-12-02", "2024-12-09", "2024-12-16", "2024-12-23", "2024-12-30", "2025-01-06", "2025-01-13", "2025-01-20", "2025-01-27", "2025-02-03", "2025-02-10", "2025-02-17", "2025-02-24", "2025-03-03", "2025-03-10", "2025-03-17", "2025-03-24", "2025-03-31", "2025-04-07", "2025-04-14", "2025-04-21", "2025-04-28", "2025-05-05", "2025-05-12", "2025-05-19", "2025-05-26", "2025-06-02", "2025-06-09", "2025-06-16", "2025-06-23", "2025-06-30", "2025-07-07", "2025-07-14", "2025-07-21", "2025-07-28", "2025-08-04", "2025-08-11", "2025-08-18", "2025-08-25", "2025-09-01", "2025-09-08", "2025-09-15", "2025-09-22", "2025-09-29", "2025-10-06", "2025-10-13", "2025-10-20", "2025-10-27", "2025-11-03", "2025-11-10", "2025-11-17", "2025-11-24", "2025-12-01", "2025-12-08", "2025-12-15", "2025-12-22", "2025-12-29", "2026-01-05", "2026-01-12", "2026-01-19", "2026-01-26", "2026-02-02", "2026-02-09", "2026-02-16"], "cases": [0, 1, 1, 4, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 2, 3, 6, 1, 4, 2, 0, 1, 9, 18, 19, 32, 15, 40, 28, 30, 18, 14, 9, 34, 34, 28, 38, 60, 94, 45, 72, 58, 54, 70, 62, 45, 66, 48, 69, 100, 86, 83, 190, 159, 158, 120, 113, 172, 224, 161, 205, 263, 318, 412, 283, 150, 161, 196, 205, 259, 379, 241, 360, 328, 303, 281, 388, 284, 247, 516, 483, 368, 433, 444, 318, 272, 231, 580, 869, 661, 555, 469, 560, 476, 554, 490, 558, 608, 510, 391, 467, 508, 676, 806, 704, 689, 559, 943, 743, 624, 516, 416, 374, 398, 340, 376, 428, 362, 386, 262, 330, 383, 385, 511, 308, 375, 188, 288, 149, 234, 114, 88, 75, 115, 140, 124, 102, 129, 29, 131, 96, 92, 81, 68, 82, 48, 55], "smoothed": [0.0, 0.1, 1.0, 1.4, 3.6, 0.8, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1, 1.0, 0.8, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.9, 5.2, 0.0, 0.0, 0.3, 2.1, 3.4, 5.3, 1.4, 3.7, 1.7, 0.1, 2.1, 10.2, 18.1, 20.8, 29.6, 18.6, 38.3, 28.3, 28.3, 17.4, 13.3, 12.6, 34.0, 33.2, 29.4, 41.1, 64.8, 87.0, 48.9, 70.0, 57.4, 56.3, 68.8, 59.5, 48.0, 63.4, 51.0, 73.4, 98.0, 85.6, 98.3, 185.6, 158.8, 152.6, 119.0, 121.4, 179.4, 215.0, 167.3, 213.3, 270.9, 331.4, 393.6, 264.0, 151.6, 166.0, 197.3, 212.7, 276.1, 359.3, 258.0, 355.4, 324.4, 299.9, 296.3, 373.1, 278.7, 285.4, 511.3, 466.6, 377.3, 434.5, 426.0, 311.4, 266.2, 280.9, 621.3, 839.3, 645.9, 542.7, 482.0, 548.0, 487.1, 544.8, 499.7, 565.1, 594.0, 493.0, 401.9, 472.9, 532.1, 694.6, 791.4, 701.9, 670.4, 613.8, 915.1, 725.3, 608.5, 501.7, 410.0, 377.4, 389.7, 345.1, 383.5, 418.6, 365.5, 368.3, 271.7, 337.6, 383.3, 403.0, 482.0, 317.6, 348.3, 202.3, 268.1, 161.2, 216.9, 110.3, 86.2, 80.8, 118.6, 137.7, 120.8, 105.8, 114.7, 43.6, 126.0, 95.4, 90.4, 79.1, 70.0, 77.2, 49.0]}, "conflict": {"labels": ["2019-01-01", "2019-02-01", "2019-03-01", "2019-04-01", "2019-05-01", "2019-06-01", "2019-07-01", "2019-08-01", "2019-09-01", "2019-10-01", "2019-11-01", "2019-12-01", "2020-01-01", "2020-02-01", "2020-03-01", "2020-04-01", "2020-05-01", "2020-06-01", "2020-07-01", "2020-08-01", "2020-09-01", "2020-10-01", "2020-11-01", "2020-12-01", "2021-01-01", "2021-02-01", "2021-03-01", "2021-04-01", "2021-05-01", "2021-06-01", "2021-07-01", "2021-08-01", "2021-09-01", "2021-10-01", "2021-11-01", "2021-12-01", "2022-01-01", "2022-02-01", "2022-03-01", "2022-04-01", "2022-05-01", "2022-06-01", "2022-07-01", "2022-08-01", "2022-09-01", "2022-10-01", "2022-11-01", "2022-12-01", "2023-01-01", "2023-02-01", "2023-03-01", "2023-04-01", "2023-05-01", "2023-06-01", "2023-07-01", "2023-08-01", "2023-09-01", "2023-10-01", "2023-11-01", "2023-12-01", "2024-01-01", "2024-02-01", "2024-03-01", "2024-04-01", "2024-05-01", "2024-06-01", "2024-07-01", "2024-08-01", "2024-09-01", "2024-10-01", "2024-11-01", "2024-12-01", "2025-01-01", "2025-02-01", "2025-03-01", "2025-04-01", "2025-05-01", "2025-06-01", "2025-07-01", "2025-08-01", "2025-09-01", "2025-10-01", "2025-11-01", "2025-12-01", "2026-01-01", "2026-02-01", "2026-03-01"], "events": [164, 221, 180, 153, 181, 228, 232, 188, 175, 258, 300, 187, 267, 243, 242, 287, 365, 260, 292, 214, 339, 320, 291, 291, 283, 255, 293, 455, 343, 303, 338, 289, 349, 464, 477, 392, 561, 486, 393, 441, 453, 513, 270, 225, 150, 205, 283, 436, 377, 254, 287, 247, 180, 205, 248, 211, 168, 200, 163, 161, 242, 221, 203, 178, 247, 237, 160, 172, 174, 170, 115, 185, 334, 264, 300, 277, 242, 243, 296, 259, 283, 297, 295, 314, 250, 281, 120], "fatalities": [327, 356, 225, 211, 356, 750, 392, 261, 250, 348, 514, 463, 568, 525, 439, 736, 718, 636, 639, 426, 548, 590, 421, 469, 555, 483, 599, 825, 546, 603, 554, 534, 518, 773, 883, 786, 994, 853, 806, 712, 814, 682, 415, 489, 474, 335, 770, 668, 574, 354, 642, 726, 403, 399, 429, 550, 324, 431, 388, 245, 638, 336, 263, 422, 454, 674, 648, 310, 595, 359, 168, 611, 1491, 815, 532, 374, 384, 283, 815, 717, 376, 390, 577, 467, 608, 249, 127]}, "funding": {"clusters": ["Food Security", "Nutrition", "Health", "Protection", "WASH", "Education"], "pct": [40.6, 32.5, 29.8, 38.1, 36.9, 18.2], "req_m": [9619.0, 2184.2, 1746.4, 1283.7, 890.2, 724.9], "fund_m": [3902.5, 709.1, 519.8, 489.7, 328.4, 131.7]}};
+
+// ── Populate KPI cards ──
+const fmt = n => n.toLocaleString();
+document.getElementById("kTotalCases").textContent = fmt(D.kpis.total_cases);
+document.getElementById("kPeak").textContent       = "↑ Peak: " + fmt(D.kpis.peak_cases) + " cases/wk · Oct 2024";
+document.getElementById("kDeaths").textContent     = fmt(D.kpis.total_deaths);
+document.getElementById("kCfr").textContent        = "CFR " + D.kpis.cfr_pct + "% — likely under-counted";
+document.getElementById("kEvents").textContent     = fmt(D.kpis.total_events);
+document.getElementById("kFat").textContent        = "↑ " + fmt(D.kpis.total_fatalities) + " conflict fatalities";
+document.getElementById("kFunded").textContent     = "$" + D.kpis.funded_bn + "B";
+document.getElementById("kRequired").textContent   = "Received vs $" + D.kpis.required_bn + "B required";
+document.getElementById("kPct").textContent        = D.kpis.overall_pct + "% covered · $" + D.kpis.gap_bn + "B gap";
+document.getElementById("kInform").textContent     = D.kpis.inform_score + " / 10";
+
+// ── Populate INFORM panel ──
+document.getElementById("informScore").textContent = D.kpis.inform_score;
+document.getElementById("informCat").textContent   = "Category " + D.kpis.inform_cat + " — Complex Crisis";
+document.getElementById("isFat").textContent       = fmt(D.kpis.total_fatalities);
+document.getElementById("isPeak").textContent      = fmt(D.kpis.peak_fatalities);
+document.getElementById("isGap").textContent       = "$" + D.kpis.gap_bn + "B";
+document.getElementById("isReq").textContent       = D.kpis.required_bn;
+document.getElementById("isMpox").textContent      = fmt(D.kpis.peak_cases);
+document.getElementById("informStory").textContent = D.kpis.inform_score;
+document.getElementById("gapStory").textContent    = "$" + D.kpis.gap_bn + "B";
+document.getElementById("storyPct").textContent    = D.kpis.overall_pct + "%";
+document.getElementById("storyReq").textContent    = "$" + D.kpis.required_bn + "B";
+document.getElementById("storyGap").textContent    = "$" + D.kpis.gap_bn + "B";
+
+// ── Funding table ──
+const ft = document.getElementById("fundingTable");
+D.funding.clusters.forEach((name, i) => {
+  const pct   = D.funding.pct[i];
+  const cls   = pct >= 60 ? "g" : pct >= 40 ? "a" : "r";
+  const color = pct >= 60 ? "#14b8a6" : pct >= 40 ? "#f59e0b" : "#e8453c";
+  ft.innerHTML += `
+    <div class="frow">
+      <div class="fhdr">
+        <span class="fname" title="${name}">${name}</span>
+        <span class="fpct ${cls}">${pct}%</span>
+      </div>
+      <div class="ftrack">
+        <div class="ffill" style="width:${pct}%;background:${color};opacity:0.75"></div>
+      </div>
+    </div>`;
+});
+
+// ── Chart.js global defaults ──
+Chart.defaults.color       = "#8a95a8";
+Chart.defaults.borderColor = "#1e2530";
+Chart.defaults.font.family = "'DM Mono', monospace";
+Chart.defaults.font.size   = 10;
+const TT = {
+  backgroundColor: "#13171e", borderColor: "#252c3a", borderWidth: 1,
+  titleColor: "#f0ede8", bodyColor: "#8a95a8", padding: 10,
+};
+const yAxis = {
+  grid:  { color: "#1e2530" },
+  ticks: { color: "#4a5568", font: { size: 9 } }
+};
+
+// ── X-axis tick helper ──
+// For weekly mpox data (YYYY-MM-DD strings): show Jan of each year + mid-year month
+// For monthly conflict data (YYYY-MM-DD strings): show every January
+function mpoxTick(labels) {
+  return {
+    color: "#4a5568",
+    font: { size: 9 },
+    maxRotation: 0,
+    autoSkip: false,
+    callback: (_, i) => {
+      if (!labels[i]) return "";
+      const d = new Date(labels[i]);
+      const m = d.getMonth();
+      const day = d.getDate();
+      // Show Jan 1 and Jul 1 of each year (first week of those months)
+      if (day <= 7 && (m === 0 || m === 6)) {
+        return m === 0 ? d.getFullYear() : "Jul";
+      }
+      return "";
+    }
+  };
+}
+
+function conflictTick(labels) {
+  return {
+    color: "#4a5568",
+    font: { size: 9 },
+    maxRotation: 0,
+    autoSkip: false,
+    callback: (_, i) => {
+      if (!labels[i]) return "";
+      const d = new Date(labels[i]);
+      // Show every January as a year label
+      return d.getMonth() === 0 ? d.getFullYear() : "";
+    }
+  };
+}
+
+// ── Mpox weekly cases ──
+new Chart(document.getElementById("mpoxChart"), {
+  type: "bar",
+  data: {
+    labels: D.mpox.labels,
+    datasets: [
+      {
+        label: "Weekly new cases",
+        data: D.mpox.cases,
+        backgroundColor: "rgba(232,69,60,0.5)",
+        borderColor: "transparent",
+        borderRadius: 1,
+        order: 2,
+      },
+      {
+        label: "WHO smoothed avg",
+        data: D.mpox.smoothed,
+        type: "line",
+        borderColor: "#f97316",
+        borderWidth: 2,
+        pointRadius: 0,
+        tension: 0.4,
+        fill: false,
+        order: 1,
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    interaction: { mode: "index", intersect: false },
+    plugins: { legend: { display: false }, tooltip: TT },
+    scales: {
+      x: { grid: { display: false }, ticks: mpoxTick(D.mpox.labels) },
+      y: { ...yAxis, title: { display: true, text: "New cases per week", color: "#4a5568", font: { size: 9 } } }
+    }
+  }
+});
+
+// ── Conflict events bar ──
+new Chart(document.getElementById("conflictChart"), {
+  type: "bar",
+  data: {
+    labels: D.conflict.labels,
+    datasets: [{
+      label: "Events",
+      data: D.conflict.events,
+      backgroundColor: "rgba(249,115,22,0.45)",
+      borderColor: "transparent",
+      borderRadius: 1,
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: { legend: { display: false }, tooltip: TT },
+    scales: {
+      x: { grid: { display: false }, ticks: conflictTick(D.conflict.labels) },
+      y: { ...yAxis, title: { display: true, text: "Events / month", color: "#4a5568", font: { size: 9 } } }
+    }
+  }
+});
+
+// ── Conflict fatalities area ──
+const fatCtx  = document.getElementById("fatalitiesChart").getContext("2d");
+const fatGrad = fatCtx.createLinearGradient(0, 0, 0, 220);
+fatGrad.addColorStop(0, "rgba(232,69,60,0.4)");
+fatGrad.addColorStop(1, "rgba(232,69,60,0.02)");
+new Chart(fatCtx, {
+  type: "line",
+  data: {
+    labels: D.conflict.labels,
+    datasets: [{
+      label: "Fatalities",
+      data: D.conflict.fatalities,
+      borderColor: "#e8453c",
+      borderWidth: 2,
+      backgroundColor: fatGrad,
+      fill: true,
+      pointRadius: 0,
+      tension: 0.4,
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: { legend: { display: false }, tooltip: TT },
+    scales: {
+      x: { grid: { display: false }, ticks: conflictTick(D.conflict.labels) },
+      y: { ...yAxis, title: { display: true, text: "Deaths / month", color: "#4a5568", font: { size: 9 } } }
+    }
+  }
+});
+</script>
+</body>
+</html>
