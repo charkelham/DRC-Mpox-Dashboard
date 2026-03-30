@@ -1,5 +1,7 @@
 # 🇨🇩 DRC Mpox Humanitarian Dashboard
 
+**[▶ View the live dashboard](https://charkelham.github.io/DRC-Mpox-Dashboard/drc_mpox_dashboard.html)**
+
 A self-contained, data-driven dashboard tracking the intersection of the **Mpox outbreak**, **armed conflict**, and **humanitarian funding gaps** in the Democratic Republic of Congo.
 
 Built in Python, rendered as a single HTML file with interactive Chart.js visualisations — no server required.
