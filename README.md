@@ -6,7 +6,7 @@ Built in Python, rendered as a single HTML file with interactive Chart.js visual
 
 ## Overview
 
-The DRC faces one of the world's most severe humanitarian crises. This dashboard brings together four authoritative datasets to visualise the converging pressures:
+The DRC faces one of the world's most severe humanitarian crises. This dashboard brings together four humanitarian datasets to visualise the converging pressures:
 
 | Dimension | Source | File |
 |-----------|--------|------|
